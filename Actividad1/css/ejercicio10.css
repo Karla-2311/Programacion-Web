@@ -45,7 +45,7 @@ body{
 -margin: 0 auto; centra el contenedor horizontalmente
 -box-shadow: efecto de elevacion sutil
 */
-.card{
+.formulario{
     max-width: 380px;
     width: 100%;
     background: white;
@@ -65,7 +65,7 @@ h1{
     margin-bottom: 8px;
 }
 
-.subtitle{
+.subtitulo{
     color: #6C757D; /*gris para texto secundario*/
     margin-bottom: 30px;
     font-size: 14px;
@@ -76,7 +76,7 @@ h1{
 -margin-bottom: espaciado vertical entre grupos
 -display: block en labels para ocupar toda la linea
 */
-.field{
+.ventana{
     margin-bottom: 20px;
 }
 
@@ -92,7 +92,7 @@ label{
 -transition: efecto suave al hacer focus
 -:focus-state: feedback visual al interactuar
 */
-input[type="text"]{
+input{
     width: 100%;
     padding: 12px 15px;
     font-size: 15px;
@@ -103,7 +103,7 @@ input[type="text"]{
     transition: all 0.3s; /*animacion suave*/
 }
 
-input[type="text"]:focus{
+input:focus{
     border-color: var(--color-secundario);
     outline: none; /*elimina el outline predeterminado*/
     box-shadow: 0 0 0 3px rgba(32, 19, 56, 0.15); /*sombra exterior (efecto glow)*/
@@ -114,7 +114,7 @@ input[type="text"]:focus{
 -proposito: distinguir visualmente el campo que el usuario no puede editar
 -color acento: resalta que aqui aparece el resultado de la conversion
 */
-input[readonly]{
+input{
     background: var(--color-fondo);
     color: var(--color-secundario);
     font-weight: 600;
