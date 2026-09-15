@@ -1,0 +1,139 @@
+/*
+1. VARIABLES CSS (custom properties)
+-porposito: centralizar colores, fuentes y tamaños para facil mantenimiento.
+-beneficios: cambios globales desde un solo lugar.
+*/
+:root{
+    --color-primario: #927dc1;   /*color principal (morado claro)*/
+    --color-secundario: #4CC9F0; /*color acento (verde-azul)*/
+    --color-fondo: #F8F9FA;      /*color de fondo (gris claro)*/
+    --color-texto: #2B2D42;      /*color texto principal*/
+    --color-borde: #E9ECEF;      /*color de bordes sutiles*/
+}
+
+/*
+2. REST BASICO
+-Proposito: eliminar margenes y paddings predeterminados del navegador
+-importancia: evita inconsistencias entre navegadores
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*incluyes padding y border en el ancho/alto*/
+}
+
+/* 
+3. ESTILOS GENERALES
+-Tipografia: 'inter' es una fuente moderna y legible.
+-Fondo: color claro para contraste con el formulario
+*/
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6; /*mejora legibilidad en textos largos*/
+    padding: 40px 20px; /*espaciado externo*/
+}
+
+/*
+4. CONTENEDOR PRINCIPAL
+-max-width: limita el ancho en pantallas grandes
+-margin: 0 auto; centra el contenedor horizontalmente
+-box-shadow: efecto de elvacion sutil
+*/
+.contenedor-formulario{
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px; /*bordes redondeados*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);/*sombra exterior*/
+}
+
+/* 
+5. ESTILOS DE TIPOGRAFIA
+-Jerarquia visual: h1> subtitulo > labels > inputs
+-font-weight: negritas para titulos y labels
+*/
+h1{
+     font-size: 28px;
+     color: var(--color-primario);
+     margin-bottom: 8px;
+}
+
+.subtitulo{
+    color: #6C757D; /*gris para texto secundario*/
+    margin-bottom: 30px;
+}
+
+/*
+6. GRUPOS DE FORMULARIO
+-margin-bottom: espaciado vertical entre grupos
+-display: block en labels para ocupar toda la linea
+*/
+.grupo-formulario{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; /*semi-negrita*/
+    font-size: 14px;
+}
+
+/*
+7.INPUTS Y TEXTAREA
+-transition: efecto suave al hacer focus
+- :focu-state: feedback visual al interactuar
+*/
+input, textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    transition: all 0.3s; /*animacion suave*/
+}
+
+input:focus, textarea:focus{
+    border-color: var(--color-secundario);
+    outline: none; /*elimina el outline predeterminado*/
+    box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2); /*sombra interior(efecto glow)*/
+}
+
+/* 
+8. DISPOSICION EN COLUMNAS (GRUPO DOBLE)
+- grid-template-columns: divide en 2 columnas iguales
+- gap: espacio entre columnas
+*/
+.grupo-doble{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    
+}
+
+/*
+9.BOTON DE ENVIO
+- cursor: pointer; cambia el cursor al pasar sobre el boton
+- flexbox: centra texto + icono.
+- hover-state: efecto al interactuar
+*/
+.boton-enviar{
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-enviar:hover{
+    background-color: #2a0880; /*color oscuro al pasar el mouse*/
+}
