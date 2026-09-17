@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Celsius a Fahrenheit</title>
+<link rel="stylesheet" href="css/ejercicio10.css">
+</head>
+<body>
+
+  <div class="formulario">
+    <h1>Calculadora</h1>
+    <p class="subtitulo">De grados Celsius a Fahrenheit</p>
+
+    <div class="ventana">
+      <label for="celsius">Temperatura en Celsius</label>
+      <div class="fila">
+        <input type="text" id="celsius" placeholder="Ej. 25">
+        <div class="error" id="error"></div>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label for="fahrenheit">Conversion en Fahrenheit</label>
+      <div class="grados">
+        <input type="text" id="fahrenheit" readonly>
+      </div>
+    </div>
+
+    <button id="btnConvertir" type="button">Convertir</button>
+  </div>
+
+  <script src="js/ejercicio10.js"></script>
+</body>
+</html>

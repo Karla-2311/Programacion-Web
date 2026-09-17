@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calificacion de estudiantes</title>
+<link rel="stylesheet" href="css/ejercicio15.css">
+
+</head>
+<body>
+    <div class="formulario">
+    <h1>Estudiantes</h1>
+    <p class="subtitulo">Agrega estudiantes con su calificacion y calcula el promedio, el mas alto y el mas bajo.</p>
+
+    <div class="ventana">
+        <label for="entradaNombre">Nombre del estudiante:</label>
+        <input type="text" id="entradaNombre" placeholder="Ej. Juan">
+    </div>
+
+    <div class="ventana">
+        <label for="entradaCalificacion">Calificacion:</label>
+        <input type="text" id="entradaCalificacion" placeholder="Ej. 85">
+    </div>
+
+    <p class="mensajeerror" id="mensajeError"></p>
+
+    <button class="btnenviar" id="btnAgregar">Agregar estudiante</button>
+    <button class="btnenviar btnsecundario" id="btnCalcular">Calcular</button>
+
+    <div class="ventana">
+        <label>Estudiantes registrados:</label>
+        <ul class="lista-estudiantes" id="listaEstudiantes"></ul>
+    </div>
+
+    <div class="resultados">
+        <div class="ventana">
+            <label for="cajaPromedio">Calificacion promedio:</label>
+            <input type="text" id="cajaPromedio" readonly>
+        </div>
+
+        <div class="ventana">
+            <label for="cajaMejor">Calificacion mas alta:</label>
+            <input type="text" id="cajaMejor" readonly>
+        </div>
+
+        <div class="ventana">
+            <label for="cajaPeor">Calificacion mas baja:</label>
+            <input type="text" id="cajaPeor" readonly>
+        </div>
+    </div>
+</div>
+    <script src="js/ejercicio15.js"></script>
+</body>
+</html>
