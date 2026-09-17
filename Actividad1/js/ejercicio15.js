@@ -107,8 +107,8 @@ function calcular() {
 
     // Mostrar los resultados en las cajas readonly
     cajaPromedio.value = promedio.toFixed(2);
-    cajaAlta.value = mejorEstudiante.nombre + " (" + calificacionMaxima + ")";
-    cajaBaja.value = peorEstudiante.nombre + " (" + calificacionMinima + ")";
+    cajaAlta.value = mejorEstudiante.nombre;
+    cajaBaja.value = peorEstudiante.nombre;
 }
 
 btnAgregar.addEventListener("click", agregarEstudiante);
