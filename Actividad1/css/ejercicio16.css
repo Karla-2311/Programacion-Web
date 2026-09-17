@@ -1,0 +1,115 @@
+:root{
+    --color-primario: #3B7EA1;
+    --color-secundario: #b82323;
+    --color-fondo: #EEF3F2;
+    --color-texto: #1C2B33;
+    --color-borde: #D8E0DE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.formulario{
+    max-width: 380px;
+    width: 100%;
+    background: white;
+    padding: 40px 36px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1{
+    font-size: 26px;
+    color: var(--color-primario);
+    margin-bottom: 4px;
+}
+
+.subtitulo{
+    color: #6C757D;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.ventana{
+    margin-bottom: 12px;
+}
+
+label{
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input{
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    color: var(--color-texto);
+    background: white;
+    transition: all 0.3s;
+}
+
+input:focus{
+    border-color: var(--color-secundario);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(32, 19, 56, 0.15);
+}
+
+input[readonly]{
+    background: var(--color-fondo);
+    color: var(--color-secundario);
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
+input[readonly]:focus{
+    border-color: var(--color-borde);
+    box-shadow: none;
+}
+
+.btnsOperaciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.btnOperacion{
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btnOperacion:hover{
+    background-color: #2F6884;
+}
+
+.resultados{
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-borde);
+}

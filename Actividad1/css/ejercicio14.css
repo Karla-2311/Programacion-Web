@@ -1,0 +1,176 @@
+/*
+1. VARIABLES CSS (custom properties)
+-proposito: centralizar colores, fuentes y tamaños para facil mantenimiento.
+-beneficios: cambios globales desde un solo lugar.
+*/
+:root{
+    --color-primario: #3B7EA1;   /*color principal (azul frio)*/
+    --color-secundario: #b82323; /*color acento (rojo calido)*/
+    --color-fondo: #EEF3F2;      /*color de fondo (gris verdoso claro)*/
+    --color-texto: #1C2B33;      /*color texto principal*/
+    --color-borde: #D8E0DE;      /*color de bordes sutiles*/
+}
+
+/*
+2. RESET BASICO
+-proposito: eliminar margenes y paddings predeterminados del navegador
+-importancia: evita inconsistencias entre navegadores
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*incluye padding y border en el ancho/alto*/
+}
+
+/*
+3. ESTILOS GENERALES
+-tipografia: 'Helvetica Neue' es limpia y legible en pantalla
+-fondo: color claro para contraste con la tarjeta
+*/
+body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6; /*mejora legibilidad en textos largos*/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px; /*espaciado externo*/
+}
+
+/*
+4. CONTENEDOR PRINCIPAL
+-max-width: limita el ancho en pantallas grandes
+-box-shadow: efecto de elevacion sutil
+*/
+.formulario{
+    max-width: 380px;
+    width: 100%;
+    background: white;
+    padding: 30px 36px;
+    border-radius: 12px; /*bordes redondeados*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /*sombra exterior*/
+}
+
+/*
+5. ESTILOS DE TIPOGRAFIA
+-jerarquia visual: h1 > subtitulo > labels > inputs
+-font-weight: negritas para titulos y labels
+*/
+h1{
+    font-size: 28px;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+}
+
+.subtitulo{
+    color: #6C757D; /*gris para texto secundario*/
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/*
+6. GRUPOS DE FORMULARIO
+-margin-bottom: espaciado vertical entre grupos
+-display: block en labels para ocupar toda la linea
+*/
+.ventana{
+    margin-bottom: 5px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; /*semi-negrita*/
+    font-size: 14px;
+}
+
+/*
+7. INPUTS
+-transition: efecto suave al hacer focus
+-:focus-state: feedback visual al interactuar
+*/
+input{
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    color: var(--color-texto);
+    background: white;
+    transition: all 0.3s; /*animacion suave*/
+}
+
+input:focus{
+    border-color: var(--color-secundario);
+    outline: none; /*elimina el outline predeterminado*/
+    box-shadow: 0 0 0 3px rgba(32, 19, 56, 0.15); /*sombra exterior (efecto glow)*/
+}
+
+/*
+8. CAMPOS DE RESULTADO (readonly)
+-proposito: distinguir visualmente los campos que el usuario no puede editar
+-color acento: resalta que aqui aparecen los resultados del calculo
+*/
+input[readonly]{
+    background: var(--color-fondo);
+    color: var(--color-secundario);
+    font-weight: 600;
+    cursor: not-allowed;
+}
+
+input[readonly]:focus{
+    border-color: var(--color-borde);
+    box-shadow: none; /*los campos bloqueados no necesitan efecto glow*/
+}
+
+/*
+9. MENSAJE DE ERROR
+-proposito: informar al usuario cuando la entrada no es valida
+-min-height: reserva el espacio para evitar saltos en el diseño
+*/
+.mensaje-error{
+    color: var(--color-secundario);
+    font-size: 13px;
+    min-height: 20px;
+    margin-bottom: 12px;
+}
+
+/*
+10. BOTON DE ENVIO
+-cursor: pointer; cambia el cursor al pasar sobre el boton
+-flexbox: centra el texto dentro del boton
+-hover-state: efecto al interactuar
+*/
+.boton-enviar,
+button{
+    width: 100%;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-enviar:hover,
+button:hover{
+    background-color: #2F6884; /*color mas oscuro al pasar el mouse*/
+}
+
+/*
+11. SECCION DE RESULTADOS
+-border-top: separa visualmente la entrada de los resultados
+*/
+.resultados{
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-borde);
+}
