@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de pesos a dólares</title>
+<link rel="stylesheet" href="css/ejercicio12.css">
+
+</head>
+<body>
+    <div class="formulario">
+        
+    <h1>Calculadora</h1>
+    <p class="subtitulo">Conversión de pesos a dólares</p>
+
+    <div class="ventana">     
+        <label for="pesos">Cantidad en pesos</label>
+        <div class="campo">
+            <input type="text" id="pesos" placeholder="Ej. 500">
+            <div class="error" id="error"></div>
+    </div>
+    </div>
+    <div class="ventana">
+        <label for="dolares">Conversion en millas</label>
+        <div class="campo">
+            <input type="text" id="dolares" readonly>
+        </div> 
+    </div>
+    <button id="btnConvertir" type="button">Convertir</button>
+    </div>
+    <script src="js/ejercicio12.js"></script>
+</body>
+</html>
